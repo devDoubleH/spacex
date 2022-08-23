@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Familjen Grotesk", sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header/Navbar */
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  height: 100px;
+  padding: 0 30px;
+}
+
+/* Logo */
+
+.logo {
+  width: 210px;
+  height: auto;
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Desktop menu */
+.desktop-main-menu {
+  margin-right: 50px;
+}
+
+.desktop-main-menu ul {
+  display: flex;
+}
+
+.desktop-main-menu ul li {
+  position: relative;
+  margin-right: 20px;
+  padding-bottom: 2px;
+}
+
+/* menu item bottom border */
+
+.desktop-main-menu ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  transform: scaleX(0);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  transform-origin: right center;
+}
+
+.desktop-main-menu ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left center;
+  transition-duration: 0.4s;
+}
+
+/* Sections */
+
+section {
+  position: relative;
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-transform: uppercase;
+}
+
+.section-inner {
+  position: absolute;
+  bottom: 200px;
+  left: 150px;
+  max-width: 560px;
+}
+
+.section-inner h4 {
+  font-size: 22px;
+  margin-bottom: 5px;
+  font-weight: 300;
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+.section-inner h2 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  animation: fadeInUp 0.5s ease-in-out 0.2s;
+  animation-fill-mode: both;
+}
+
+.section-inner a {
+  animation: fadeInUp 0.5s ease-in-out 0.4s;
+  animation-fill-mode: both;
+}
+
+.scroll-arrow {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: fadeBounce 5s infinite;
+}
+
+/* background images */
+.section-a {
+  background-image: url("../img/section-a.webp");
+}
+
+.section-b {
+  background-image: url("../img/section-b.webp");
+}
+
+.section-c {
+  background-image: url("../img/section-c.webp");
+}
+
+.section-d {
+  background-image: url("../img/section-d.webp");
+}
+
+.section-e {
+  background-image: url("../img/section-e.webp");
+}
+
+.section-f {
+  background-image: url("../img/section-f.webp");
+}
+
+footer{}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  min-width: 130px;
+  padding: 15px 50px;
+  margin-top: 10px;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.btn:hover span {
+  color: #000;
+}
+
+.btn .hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  color: #000;
+  z-index: -1;
+  transform: translateY(100%);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn:hover .hover {
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(170px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeBounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
