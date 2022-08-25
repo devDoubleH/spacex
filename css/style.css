@@ -159,7 +159,34 @@ section {
   background-image: url("../img/section-f.webp");
 }
 
-footer{}
+footer {
+  position: relative;
+  padding: 55px 0;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+footer ul li {
+  margin-right: 30px;
+  color: #aaa;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 2.5;
+}
+
+footer ul li a {
+  color: #fff;
+  transition: color 0.6s;
+}
+
+footer ul li a:hover{
+  color: #aaa;
+}
 
 .btn {
   position: relative;
@@ -220,5 +247,21 @@ footer{}
   40% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+
+@media(max-width: 960px) {
+  /* Hide desktop menu */
+
+  .desktop-main-menu{
+    display: none;
+  }
+}
+
+@media(max-width: 600px){
+  .section-inner{
+    bottom: 75px;
+    left: 20px;
   }
 }
